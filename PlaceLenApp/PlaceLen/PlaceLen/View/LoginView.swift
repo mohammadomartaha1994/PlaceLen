@@ -91,7 +91,7 @@ struct LoginView: View {
                 .padding(.horizontal)
                 .padding(.top, 15)
 
-                
+            
                 VStack(spacing: 40) {
                     HStack(spacing: 12) {
                         CountryMenuPicker(vm: vm)
