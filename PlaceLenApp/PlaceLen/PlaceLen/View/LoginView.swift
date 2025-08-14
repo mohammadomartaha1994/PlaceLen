@@ -134,6 +134,7 @@ struct LoginView: View {
             .navigationDestination(isPresented: $navigateToVerification) {
                 VerificationView()
             }
+            
         }
     }
 }

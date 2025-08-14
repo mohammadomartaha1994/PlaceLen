@@ -8,7 +8,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     private let geocoder = CLGeocoder()
     
