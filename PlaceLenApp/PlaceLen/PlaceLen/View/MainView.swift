@@ -32,15 +32,37 @@ struct MainView: View {
             // 2. Foreground content
             VStack(spacing: 0) {
                 
-                // Top image (overlayed on map)
-                Image("VerifiedBackground")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-                    .opacity(0.96)
-                
-                
+                ZStack {
+                    Image("VerifiedBackground")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 180)
+                        .clipped()
+                        .opacity(0.96)
+                    
+                    // Center logo stays fixed in center
+                    Image("PlaceLenTextLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(.bottom, 15)
+                    
+                    // Right icon - aligned to the trailing edge
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            // Icon action
+                        }) {
+                            Image(systemName: "person.fill")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .padding(.trailing, 16)
+                                .padding(.bottom, 15)
+                        }
+                    }
+                }
+
+
                 Spacer()
                 
                 // Bottom section with image buttons
@@ -49,6 +71,7 @@ struct MainView: View {
                     Text(mapViewModel.address)
                         .font(.headline)
                         .padding()
+                        .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                     
                     HStack(spacing: 20) {
