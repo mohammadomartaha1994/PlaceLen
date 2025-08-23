@@ -28,7 +28,7 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             DispatchQueue.main.async {
-                let offsetLatituede = location.coordinate.latitude - 0.003
+                let offsetLatituede = location.coordinate.latitude - 0.005
                 self.region = MKCoordinateRegion(
                     center: CLLocationCoordinate2D(latitude: offsetLatituede, longitude: location.coordinate.longitude),
                     span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
