@@ -51,15 +51,18 @@ struct MainView: View {
                     // Right icon - aligned to the trailing edge
                     HStack {
                         Spacer()
-                        Button(action: {
-                            // Icon action
-                        }) {
+                        NavigationLink {
+                            EditProfileView()
+                                .toolbar(.hidden, for: .navigationBar)
+                                .toolbarBackground(.hidden, for: .navigationBar)
+                        } label: {
                             Image(systemName: "person.fill")
                                 .font(.title2)
                                 .foregroundColor(.white)
                                 .padding(.trailing, 16)
                                 .padding(.bottom, 15)
                         }
+                        .buttonStyle(.plain) // keeps it looking like a button, no extra styling
                     }
                 }
 

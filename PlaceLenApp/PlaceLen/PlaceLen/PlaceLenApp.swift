@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+
 @main
 struct PlaceLenApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            NavigationStack {
+                SplashView()
+                    .toolbar(.hidden, for: .navigationBar)
+                    .toolbarBackground(.hidden, for: .navigationBar)
+            }
         }
     }
 }

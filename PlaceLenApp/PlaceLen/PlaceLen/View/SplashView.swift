@@ -53,11 +53,8 @@ struct SplashView: View {
         } else {
             // 🔹 Replace with your main screen
             MainView()
+            //LoginView()
         }
     }
 }
 
-
-#Preview {
-    SplashView()
-}

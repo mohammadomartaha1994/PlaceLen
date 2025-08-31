@@ -134,7 +134,7 @@ struct LoginView: View {
             .navigationDestination(isPresented: $navigateToVerification) {
                 VerificationView()
             }
-            
+            .toolbarBackground(.hidden, for: .navigationBar) // Transparent bar
         }
     }
 }
